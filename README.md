@@ -4,11 +4,11 @@
 
 1. cp .env.example .env
 
-Update mysql database information into .env
+- Update mysql database information into .env
 
 2. npm install 
 
-node: v18.12.0, npm: 8.19.2
+- node: v18.12.0, npm: 8.19.2
 
 3. create a database with same naming in .env file into mysql database
 
@@ -26,7 +26,7 @@ You should see 6 tables
 
 5. npm run seed:run
 
-Generate seed data into database
+- Generate seed data into database
 
 6. apis
 - `POST http://localhost:3000/api/register`
@@ -74,7 +74,7 @@ Generate seed data into database
 
 ```json
 {
-  "teacher":  "teacherken@gmail.com",
-  "notification": "Hello students! @studentagnes@gmail.com @studentmiche@gmail.com"
+  "teacher":  "teacher1@gmail.com",
+  "notification": "Hello students! @student1@gmail.com @student30@gmail.com"
 }
 ```
