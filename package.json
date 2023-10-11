@@ -1,0 +1,32 @@
+{
+  "name": "teacher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx nodemon server.js",
+    "migration:dev": "npx knex migrate:latest --knexfile database/knexfile.js",
+    "migrate:make": "npx knex migrate:make --knexfile database/knexfile.js",
+    "rollback:dev": "knex migrate:rollback --knexfile database/knexfile.js",
+    "seed:make": "npx knex seed:make --knexfile database/knexfile.js",
+    "seed:run": "npx knex seed:run --knexfile database/knexfile.js",
+    "seed:run:one": "npx knex seed:run --knexfile database/knexfile.js --specific=",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "knex": "^3.0.1",
+    "mysql2": "^3.6.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-cli": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
+  }
+}
