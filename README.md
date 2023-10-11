@@ -14,7 +14,7 @@
 
 4. npm run migration:dev
 
-Initial migration into database.
+- Initial migration into database.
 
 You should see 6 tables
 - knex_migrations
