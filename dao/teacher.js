@@ -51,7 +51,8 @@ class TeacherDao {
                 .join('teacher_student', 'students.id', '=', 'teacher_student.student_id')
                 .join('teachers', 'teacher_student.teacher_id', '=', 'teachers.id')
                 .whereIn('teachers.email', teachers)
-                .groupBy('students.email');
+                .groupBy('students.email')
+                .havingRaw(`COUNT(DISTINCT teachers.email) = ${teachers.length}`);
             
             return students;
         } catch (error) {
